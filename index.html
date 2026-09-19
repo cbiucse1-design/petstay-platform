@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f3ed" />
+  <title>PetStay | Care that feels like home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pet-view.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="PetStay home">
+        <span class="brand-mark"><span></span><span></span></span>
+        <span>pet<span>stay</span></span>
+      </a>
+
+      <div class="profile-mini">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=160&q=80" alt="Milo and a friend" />
+        <div><strong>Good morning, Maya</strong><small>Pet parent</small></div>
+        <button class="icon-button" aria-label="Open profile menu">•••</button>
+      </div>
+
+      <nav class="nav-list">
+        <p class="nav-label">Workspace</p>
+        <a class="nav-item active" href="#dashboard" data-view="dashboard"><span class="nav-icon">⌂</span>Overview</a>
+        <a class="nav-item" href="#stays" data-view="stays"><span class="nav-icon">⌁</span>Find a stay</a>
+        <a class="nav-item" href="#pets" data-view="pets"><span class="nav-icon">♡</span>My pets <b>2</b></a>
+        <a class="nav-item" href="#messages" data-view="messages"><span class="nav-icon">↗</span>Messages <b class="notification-count">3</b></a>
+        <a class="nav-item" href="#orders" data-view="orders"><span class="nav-icon">▢</span>Orders</a>
+        <p class="nav-label nav-label-spaced">Services</p>
+        <a class="nav-item" href="#vets" data-view="vets"><span class="nav-icon">✚</span>Find a vet</a>
+        <a class="nav-item" href="#marketplace" data-view="marketplace"><span class="nav-icon">◌</span>Marketplace</a>
+        <a class="nav-item" href="#saved" data-view="saved"><span class="nav-icon">⚑</span>Saved places</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="host-prompt">
+          <span class="spark">✦</span>
+          <strong>Have a pet-friendly space?</strong>
+          <p>Earn by hosting with a little heart.</p>
+          <button class="text-button">Become a host <span>↗</span></button>
+        </div>
+        <a class="nav-item" href="#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <a class="nav-item" href="#help"><span class="nav-icon">?</span>Help center</a>
+      </div>
+    </aside>
+
+    <main class="main-content" id="top">
+      <header class="topbar">
+        <button class="mobile-menu icon-button" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><i>/</i><strong id="page-title">Overview</strong></div>
+        <div class="topbar-actions">
+          <button class="icon-button notification-button" aria-label="Notifications"><span class="bell-dot"></span>♧</button>
+          <button class="avatar-button" aria-label="Open account menu">MS</button>
+        </div>
+      </header>
+
+      <div class="page-wrap" id="dashboard">
+        <section class="welcome-row">
+          <div>
+            <p class="eyebrow">Saturday, September 19, 2026</p>
+            <h1>Make room for <em>more</em> tail wags.</h1>
+            <p class="subheading">Everything your pet needs, thoughtfully brought together.</p>
+          </div>
+          <button class="primary-button add-pet-button" id="add-pet-button"><span>＋</span> Add a pet</button>
+        </section>
+
+        <section class="search-panel" aria-label="Search for a pet stay">
+          <div class="search-intro"><span class="search-icon">⌕</span><div><strong>Find a home away from home</strong><small>Trusted stays, happy pets.</small></div></div>
+          <form class="search-form" id="search-form">
+            <label><span>Where</span><input id="location-input" type="text" placeholder="City or neighborhood" value="Dhaka" /></label>
+            <label><span>Check in</span><input type="date" value="2026-09-23" /></label>
+            <label><span>Check out</span><input type="date" value="2026-09-27" /></label>
+            <label><span>Pet</span><select><option>Milo · Dog</option><option>Luna · Cat</option><option>Any pet</option></select></label>
+            <button class="search-button" type="submit" aria-label="Search stays">⌕</button>
+          </form>
+        </section>
+
+        <section class="section-block stays-section" id="stays">
+          <div class="section-heading"><div><p class="eyebrow">Picked for you</p><h2>Popular stays nearby</h2></div><a class="view-link" href="#stays">Explore all <span>→</span></a></div>
+          <div class="stay-grid" id="stay-grid">
+            <article class="stay-card" data-location="Dhaka">
+              <div class="stay-image"><img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=800&q=85" alt="Golden retriever relaxing on a sofa" /><span class="verified-pill">✓ Verified host</span><button class="heart-button" aria-label="Save Cozy Paws Retreat">♡</button></div>
+              <div class="stay-card-content"><div class="card-topline"><span>Banani, Dhaka</span><span class="rating">★ 4.98</span></div><h3>Cozy Paws Retreat</h3><p>Sunny home with a shaded garden and daily walks.</p><div class="card-footer"><strong>৳ 1,200 <small>/ night</small></strong><button class="small-button book-button" data-stay="Cozy Paws Retreat">View stay</button></div></div>
+            </article>
+            <article class="stay-card" data-location="Dhaka">
+              <div class="stay-image"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=85" alt="Happy dog outdoors at a pet stay" /><span class="verified-pill">✓ Verified host</span><button class="heart-button" aria-label="Save Green Tail House">♡</button></div>
+              <div class="stay-card-content"><div class="card-topline"><span>Gulshan, Dhaka</span><span class="rating">★ 4.91</span></div><h3>Green Tail House</h3><p>Calm indoor space with a big play lawn and pool.</p><div class="card-footer"><strong>৳ 950 <small>/ night</small></strong><button class="small-button book-button" data-stay="Green Tail House">View stay</button></div></div>
+            </article>
+            <article class="stay-card" data-location="Chattogram">
+              <div class="stay-image"><img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=800&q=85" alt="Small dog looking at the camera" /><span class="verified-pill">✓ Verified host</span><button class="heart-button" aria-label="Save The Little Woof">♡</button></div>
+              <div class="stay-card-content"><div class="card-topline"><span>Panchlaish, Chattogram</span><span class="rating">★ 4.87</span></div><h3>The Little Woof</h3><p>A quiet, cozy nook for small dogs and gentle cats.</p><div class="card-footer"><strong>৳ 780 <small>/ night</small></strong><button class="small-button book-button" data-stay="The Little Woof">View stay</button></div></div>
+            </article>
+          </div>
+          <div class="empty-search" id="empty-search"><span>⌕</span><strong>No stays found for that place yet</strong><p>Try Dhaka or Chattogram to see available homes.</p></div>
+        </section>
+
+        <section class="section-block lower-grid">
+          <div class="activity-panel">
+            <div class="section-heading compact"><div><p class="eyebrow">Your week</p><h2>Upcoming activity</h2></div><a class="view-link" href="#activity">View calendar <span>→</span></a></div>
+            <div class="activity-list">
+              <div class="activity-item"><div class="date-tile"><strong>23</strong><small>SEP</small></div><div class="activity-copy"><span class="activity-tag stay-tag">Pet stay</span><strong>Milo's holiday at Cozy Paws</strong><small>Wed, Sep 23 · 4 nights · Banani</small></div><span class="status-dot confirmed">✓</span></div>
+              <div class="activity-item"><div class="date-tile pink"><strong>30</strong><small>SEP</small></div><div class="activity-copy"><span class="activity-tag vet-tag">Vet visit</span><strong>Annual check-up with Dr. Ayesha</strong><small>Wed, Sep 30 · 10:30 AM · PawCare Clinic</small></div><span class="status-dot">→</span></div>
+            </div>
+          </div>
+          <aside class="pet-card"><div class="section-heading compact"><div><p class="eyebrow">My little family</p><h2>My pets</h2></div><button class="icon-button" aria-label="Manage pets">•••</button></div><div class="pet-profile"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=240&q=80" alt="Milo the golden dog" /><div><strong>Milo</strong><span>Golden Retriever · 4 yrs</span><small>All vaccinations up to date <i>✓</i></small></div><button class="edit-button" aria-label="Edit Milo">↗</button></div><div class="pet-profile second"><img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=240&q=80" alt="Luna the cat" /><div><strong>Luna</strong><span>Domestic Shorthair · 2 yrs</span><small>Next vaccine in 14 days <i class="warning">!</i></small></div><button class="edit-button" aria-label="Edit Luna">↗</button></div><button class="outline-button" id="view-pets-button">View all pets <span>→</span></button></aside>
+        </section>
+      </div>
+
+      <div class="page-wrap pet-view" id="pet-view" hidden>
+        <div class="pet-view-header"><button class="back-link" id="back-to-overview">← Back to overview</button><span class="pet-id-label">PET ID: PET-2026-000125</span></div>
+        <section class="pet-hero">
+          <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=85" alt="Buddy the golden retriever" />
+          <div class="pet-hero-copy"><p class="eyebrow">Digital identity</p><h1>Buddy</h1><p>Golden Retriever · Male, neutered · 3 yrs · 28.5 kg</p><span class="microchip">Microchip · 981020002148911</span></div>
+          <div class="pet-owner"><small>Owner</small><strong>Jane Doe</strong><span>+880 1711-XXXXXX</span><button class="outline-button" id="edit-pet-button">Edit profile</button></div>
+        </section>
+        <div class="pet-tabs" role="tablist"><button class="pet-tab active" data-tab="digital-tab" role="tab">Digital ID & QR</button><button class="pet-tab" data-tab="medical-tab" role="tab">Medical records</button><button class="pet-tab" data-tab="care-tab" role="tab">Diet & care rules</button></div>
+        <section class="pet-tab-panel" id="digital-tab" role="tabpanel">
+          <div class="qr-preview"><div class="fake-qr" aria-label="QR code preview"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><small>Scan to test public profile</small></div>
+          <div class="tag-settings"><div class="section-heading compact"><div><p class="eyebrow">Public QR profile</p><h2>Buddy's tag is active</h2></div><span class="active-pill">● Active</span></div><p class="panel-copy">A finder can see Buddy's safe profile and contact you without exposing private medical records.</p><div class="setting-row"><div><strong>Public contact allowed</strong><small>Let finders reach you through PetStay</small></div><button class="toggle active" id="contact-toggle" aria-pressed="true"><span></span></button></div><div class="setting-row"><div><strong>Medical alert</strong><small>Requires daily insulin at 8 AM</small></div><span class="alert-label">Visible</span></div><div class="tag-actions"><button class="primary-button" id="download-qr">Download vector QR</button><button class="outline-button" id="order-tag">Order physical tag <span>→</span></button></div></div>
+        </section>
+        <section class="pet-tab-panel medical-panel" id="medical-tab" role="tabpanel" hidden><div class="medical-summary"><p class="eyebrow">Health snapshot</p><h2>Up to date, with one reminder.</h2><p class="panel-copy">Buddy's core vaccinations are valid. His annual kennel cough booster is due soon.</p><button class="outline-button" id="upload-record">Upload a record <span>＋</span></button></div><div class="vaccination-list"><div class="section-heading compact"><div><p class="eyebrow">Vaccination timeline</p><h2>Records</h2></div><span class="record-count">3 records</span></div><div class="vaccination-row"><span class="vaccine-icon valid">✓</span><div><strong>Rabies vaccine</strong><small>Administered Mar 12, 2026 · Dr. Ayesha Rahman</small></div><span class="record-status valid-text">Valid</span></div><div class="vaccination-row"><span class="vaccine-icon valid">✓</span><div><strong>DHPP booster</strong><small>Administered Mar 12, 2026 · Dr. Ayesha Rahman</small></div><span class="record-status valid-text">Valid</span></div><div class="vaccination-row"><span class="vaccine-icon due">!</span><div><strong>Kennel cough</strong><small>Next due Oct 03, 2026</small></div><span class="record-status due-text">Due soon</span></div></div></section>
+        <section class="pet-tab-panel care-panel" id="care-tab" role="tabpanel" hidden><div><p class="eyebrow">Daily rhythm</p><h2>What helps Buddy feel at home</h2><div class="care-grid"><div class="care-rule"><span>☼</span><strong>Morning meal</strong><small>1 cup kibble at 8:00 AM</small></div><div class="care-rule"><span>⌁</span><strong>Medication</strong><small>Insulin after breakfast</small></div><div class="care-rule"><span>♡</span><strong>Behavior</strong><small>Gentle, social, loves fetch</small></div><div class="care-rule"><span>◷</span><strong>Quiet time</strong><small>Rest after afternoon walk</small></div></div></div></section>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="booking-modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Close dialog">×</button><p class="eyebrow">Ready when you are</p><h2 id="modal-title">Book your pet's stay</h2><p class="modal-copy">Your selected dates are held for 10 minutes while you review the details.</p><div class="booking-summary"><div><span>Stay</span><strong id="modal-stay">Cozy Paws Retreat</strong></div><div><span>Guest</span><strong>Milo · Golden Retriever</strong></div><div><span>Dates</span><strong>Sep 23 – Sep 27, 2026</strong></div><div class="summary-total"><span>Estimated total</span><strong id="modal-total">৳ 5,100</strong></div></div><button class="primary-button full-width" id="confirm-booking">Continue to booking <span>→</span></button></div></div>
+  <div class="modal-backdrop" id="pet-modal" hidden><div class="modal small-modal" role="dialog" aria-modal="true" aria-labelledby="pet-modal-title"><button class="modal-close" id="pet-modal-close" aria-label="Close dialog">×</button><p class="eyebrow">Pet profiles</p><h2 id="pet-modal-title">Add a new pet</h2><p class="modal-copy">Keep their details close so every stay feels personal.</p><form id="pet-form"><label class="form-field"><span>Pet name</span><input required placeholder="e.g. Daisy" /></label><label class="form-field"><span>Pet type</span><select><option>Dog</option><option>Cat</option><option>Bird</option><option>Rabbit</option></select></label><button class="primary-button full-width" type="submit">Save pet <span>✓</span></button></form></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
